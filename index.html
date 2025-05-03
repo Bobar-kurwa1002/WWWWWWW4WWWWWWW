@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Волгоград — город героев</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Волгоград — город героев</h1>
+    <p>Столица великой битвы, история которой живёт в сердцах миллионов</p>
+    <nav>
+      <a href="#about">О городе</a>
+      <a href="#history">История</a>
+      <a href="#places">Достопримечательности</a>
+      <a href="#map">Как добраться</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- О городе -->
+    <section id="about" class="scroll-animation">
+      <h2>О городе</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Volgograd_001.jpg/1200px-Volgograd_001.jpg" alt="Волгоград" class="hero-image">
+      <p>Волгоград — крупный город на юге России, расположенный на берегу Волги. Бывший Сталинград, известен своей решающей ролью в Великой Отечественной войне.</p>
+      <p>Сегодня это современный мегаполис с богатой историей, музеями, памятниками архитектуры и развитой инфраструктурой.</p>
+    </section>
+
+    <!-- История -->
+    <section id="history" class="scroll-animation">
+      <h2>История</h2>
+      <p>Город был основан как крепость Царицын в 1589 году. В 1925 году он был переименован в Сталинград в честь Иосифа Сталина. Сталинградская битва (1942–1943) стала одним из ключевых сражений Второй мировой войны.</p>
+      <p>После войны город был восстановлен, а в 1961 году получил название Волгоград, по реке Волге, которая протекает рядом.</p>
+    </section>
+
+    <!-- Достопримечательности -->
+    <section id="places" class="scroll-animation">
+      <h2>Достопримечательности</h2>
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Mamayev_kurgan_02.jpg/800px-Mamayev_kurgan_02.jpg" alt="Мамаев курган">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rodina-Zovyot-1.jpg/800px-Rodina-Zovyot-1.jpg" alt="Родина-мать зовет!">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Volgograd_square_of_Sorrow_2.jpg/800px-Volgograd_square_of_Sorrow_2.jpg" alt="Площадь Скорби">
+      </div>
+      <ul>
+        <li><strong>Мамаев курган</strong> — место великих боёв, скульптурный комплекс «Родина-мать зовёт!»</li>
+        <li><strong>Площадь Скорби</strong> — мемориальный комплекс у Волги</li>
+        <li><strong>Центральный парк культуры и отдыха</strong> — одно из любимых мест жителей и гостей города</li>
+      </ul>
+    </section>
+
+    <!-- Как добраться -->
+    <section id="map" class="scroll-animation">
+      <h2>Как добраться</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233226.0197164962!2d44.45775147720841!3d48.70712634299923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ebeccbf881c871%3A0xd5ac1c0bde4b02cf!2z0JvRjNC40YnQutCwINCQ0LDRgNGD0LrQuNCy0L7QstC-0LTQuNGP!5e0!3m2!1sru!2sru!4v1714449559296!5m2!1sru!2sru"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="scroll-animation">
+      <h2>Контакты</h2>
+      <p>Если вы хотите узнать больше о Волгограде или организовать экскурсию — свяжитесь с нами:</p>
+      <ul>
+        <li>Email: info@volgograd-tour.ru</li>
+        <li>Телефон: +7 (8442) 123-456</li>
+        <li>Instagram: @visit_volgograd</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Волгоград — город героев | Все права защищены</p>
+  </footer>
+
+  <script>
+    // Анимация появления при скролле
+    const sections = document.querySelectorAll('.scroll-animation');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
